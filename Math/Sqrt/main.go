@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func mySqrt(x int) int {
+	l, r := 0, x
+	for l < r {
+		mid := (l + r + 1) / 2
+		if mid*mid > x {
+			r = mid - 1
+		} else {
+			l = mid
+		}
+	}
+
+	return l
+}
+
+func main() {
+	fmt.Println(mySqrt(8))
+}
