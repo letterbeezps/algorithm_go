@@ -83,6 +83,18 @@
 
 * [leetcode145](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)
 
+#### **层次遍历** [example](Tree/binaryTree/levelOrder/main.go)
+
+**练习** leetcode
+
+* [leetcode102](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
+
+#### **树的高度** [example](Tree/binaryTree/depth/main.go)
+
+**练习** leetcode
+
+* [leetcode1024](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
+
 ## 图
 
 ### 最短路径
