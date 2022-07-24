@@ -1,18 +1,8 @@
-package main
+package kmp
 
 import "fmt"
 
-func main() {
-
-	p := "abcabe"
-	s := "abcabfabcabef"
-
-	index := indexOf(s, p)
-
-	fmt.Printf("find %s in %s, index is %d", p, s, index)
-}
-
-func indexOf(s, p string) int {
+func IndexOf(s, p string) int {
 	next := make([]int, len(p))
 	next[0] = -1
 
