@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 var arrs = []int{1, 2, 4, 6, 8, 8, 8}
 
@@ -8,9 +11,12 @@ func main() {
 
 	fmt.Printf("before arr: %v\n", arrs)
 
-	up_equal := binary_search_up_equal(arrs, 8)
+	up_equal := binary_search_up_equal(arrs, 9)
 
-	fmt.Printf("the index of element which first ge %d is %d\n", 8, up_equal)
+	fmt.Printf("the index of element which first ge %d is %d\n", 9, up_equal)
+
+	index := sort.SearchInts(arrs, 8)
+	fmt.Println(index)
 
 	up := binary_search_up(arrs, 8)
 
@@ -27,7 +33,7 @@ func main() {
 
 // 第一个大于等于 8
 func binary_search_up_equal(arrs []int, target int) int {
-	l, r := 0, len(arrs)-1
+	l, r := 0, len(arrs)
 	for l < r {
 		mid := (l + r) / 2
 		if arrs[mid] < target {
