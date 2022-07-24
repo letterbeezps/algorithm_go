@@ -47,7 +47,7 @@
 
 ### **KMP** [example](String/Kmp/kmp.go)
 
-### **回文串* [example](String/Palindrome/palindrome.go)
+### **回文串** [example](String/Palindrome/palindrome.go)
 
 **练习** leetcode
 
