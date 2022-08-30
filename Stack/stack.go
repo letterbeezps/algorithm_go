@@ -51,6 +51,15 @@ func (s *Stack) Pop() (flag bool, ret byte) {
 	return true, ret
 }
 
+func (s *Stack) Top() (ret byte) {
+	if s.IsEmpty() {
+		return
+	}
+	ret = s.data[s.top-1]
+	return
+
+}
+
 func isValids(s string) bool {
 	stack := NewStack()
 	for i := 0; i < len(s); i++ {
@@ -92,4 +101,19 @@ func isValids(s string) bool {
 		return true
 	}
 	return false
+}
+
+// 验证栈序列
+func validateStackSequences(pushed []byte, popped []byte) bool {
+	stack := NewStack()
+	i := 0
+	for _, v := range pushed {
+		stack.Push(v)
+		for !stack.IsEmpty() && stack.Top() == popped[i] {
+			stack.Pop()
+			i++
+		}
+	}
+	fmt.Println(stack)
+	return stack.IsEmpty()
 }
