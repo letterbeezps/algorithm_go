@@ -1,4 +1,4 @@
-package main
+package stack
 
 import (
 	"fmt"
@@ -92,9 +92,4 @@ func isValids(s string) bool {
 		return true
 	}
 	return false
-}
-
-func main() {
-	test1 := "()[]{}"
-	fmt.Println(isValids(test1))
 }

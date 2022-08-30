@@ -55,7 +55,7 @@
 
 ## 栈
 
-### **Stack** [example](Stack/main.go)
+### **Stack** [example](Stack/stack.go)
 
 **练习** leetcode
 
