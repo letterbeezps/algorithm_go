@@ -10,7 +10,7 @@ type Node struct {
 	Prev, Next *Node
 }
 
-func Constructor(capacity int) LRUCacheFromScratch {
+func ConstructorFromScratch(capacity int) LRUCacheFromScratch {
 	return LRUCacheFromScratch{
 		Keys: make(map[int]*Node),
 		Cap:  capacity,
